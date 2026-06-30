@@ -27,6 +27,15 @@
           };
         };
 
+        apps.test = {
+          type = "app";
+          program = toString (
+            pkgs.writeShellScript "test" ''
+              gotestsum --format testname -- ./... -cover
+            ''
+          );
+        };
+
         packages.default = pkgs.buildGoModule {
           pname = "trawl";
           version = "1.0.0";
@@ -37,6 +46,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             go
+            gotestsum
           ];
         };
       }
