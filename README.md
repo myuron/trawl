@@ -1,7 +1,7 @@
 # trawl
 
 <p align="center">
-  <img src="assets/trawl.png" alt="trawl logo" width="480"
+  <img src="assets/trawl.png" alt="trawl logo" width="240"
 </p>
 
 ## What is a trawl ?
