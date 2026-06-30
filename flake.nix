@@ -26,6 +26,14 @@
             golangci-lint.enable = true;
           };
         };
+
+        packages.default = pkgs.buildGoModule {
+          pname = "trawl";
+          version = "1.0.0";
+          src = ./.;
+          vendorHash = null;
+        };
+
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             go
